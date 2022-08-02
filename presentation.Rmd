@@ -1,0 +1,41 @@
+---
+title: Presentation Title
+subtitle:  Subtitle
+author: Author
+institute: Your University
+date: "22-01-2022"
+fontsize: 12pt
+output:
+  beamer_presentation:
+#    keep_tex: true
+    toc: false
+    slide_level: 2
+    includes:
+      in_header: tex/beamer_preamble.tex
+classoption: "aspectratio=169"
+bibliography: ./assets/citations/citations.bib 
+
+---
+```{r, echo=FALSE, warning = FALSE, message = FALSE}
+library(tidyverse)
+library(kableExtra)
+library(vistime)
+library(grid)
+library(gridExtra)
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, out.width = "85%", out.height = "100%", dpi=300)
+options(knitr.table.format = "latex")
+fs <- theme(text = element_text(size = 18), axis.text = element_text(size = 14))
+```
+
+# The Diamond Market
+
+```{r}
+plot_diamonds
+```
+
+
+# Slide 2
+
+
+## References {.allowframebreaks}
+
